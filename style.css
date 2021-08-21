@@ -1,0 +1,73 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#video {
+  border: 1px solid #001133;
+}
+
+button {
+  margin-top: 1rem;
+  border: none;
+  padding: 1rem;
+  background-color: #001133;
+  color: #c6c6c6;
+  font-weight: bold;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.error-msg {
+  color: red;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: none;
+}
+
+.devices-container {
+  margin-top: 1rem;
+  padding: 0.6rem;
+  background: #c6c6c6;
+  color: #221166;
+  border-radius: 3px;
+  width: 80%;
+}
+
+.device-list {
+  list-style: none;
+}
+
+.device-list li {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background: #fff;
+  border-radius: 3px 3px 0 0;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 0.2rem;
+  padding: 0.6rem;
+}
+
+.device-list li:last-child {
+  margin-bottom: 0;
+}
+
+.device-id {
+  overflow: hidden;
+  text-overflow: clip;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+@media (min-width: 720px) {
+  .device-list li {
+    flex-direction: row;
+  }
+}
