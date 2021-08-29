@@ -10,7 +10,7 @@ export const Media = {
     const constraints = {
       video: {
         width: { exact: 480 },
-        facingMode: "user",
+        facingMode: "environment",
       },
     };
 
@@ -21,6 +21,8 @@ export const Media = {
       videoElement.play();
       videoElement.style.marginBottom = "1rem";
       videoElement.style.border = "1px solid rgb(219, 56, 50)";
+
+      return videoElement;
     } catch (error) {
       console.log("deu xabu: ", err);
       const msgErr = document.querySelector(".error-msg");
