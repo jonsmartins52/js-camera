@@ -19,15 +19,19 @@ export const Media = {
         constraints
       );
       videoElement.play();
-      videoElement.style.marginBottom = "1rem";
-      videoElement.style.border = "1px solid rgb(219, 56, 50)";
 
       return videoElement;
     } catch (error) {
-      console.log("deu xabu: ", err);
       const msgErr = document.querySelector(".error-msg");
       msgErr.style.display = "block";
     }
+  },
+
+  closeCamera(videoElement) {
+    const stream = videoElement.srcObject;
+    const tracks = stream.getTracks();
+    tracks.forEach((track) => track.stop());
+    videoElement.srcObject = null;
   },
 
   async listDevices() {

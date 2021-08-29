@@ -8,10 +8,6 @@
   height: 100vh;
 }
 
-#video {
-  border: 1px solid #001133;
-}
-
 button {
   margin-top: 1rem;
   border: none;
@@ -19,6 +15,16 @@ button {
   background-color: #001133;
   color: #c6c6c6;
   font-weight: bold;
+}
+
+.btn--open {
+  background-color: #001133;
+  color: #c6c6c6;
+}
+
+.btn--close {
+  background-color: #991133;
+  color: #c6c6c6;
 }
 
 button:hover {
